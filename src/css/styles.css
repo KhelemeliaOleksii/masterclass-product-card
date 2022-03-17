@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    line-height: 1.5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* .tassels{
+    display: flex;
+    justify-content: space-between;
+    max-width: 50%;
+
+} */
+.tassels__item{
+    text-decoration: none;
+    color: inherit;
+    padding: 2px 4px;
+    background-color: blue;
+    border-radius: 6px;
+    color: white;  
+    font-weight: 700;  
+}
+.tassels__item:not(:last-child){
+    position: relative; 
+    margin-right: 11px;
+}
+/* .tassels__item:not(:last-child)::after{
+    position: absolute;
+    display: block;
+    content: '';
+    width: 6px;
+    height: 6px;
+    border: 3px solid black;
+    border-radius: 50%;
+    top: 50%;
+    transform: translate(11px, -50%);
+    right: 0;
+} */
+
+.tassels__item--active{
+    background-color: transparent;
+    color: black;
+}
+.panes__item {
+    display: none;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.panes__item::after{
+    position: absolute;
+    display: block;
+    content: "";
+    width: 80%;
+    border-bottom: 2px solid black;
+}
+.panes__item--active {
+    display:block;
+}
